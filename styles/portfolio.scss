@@ -1,0 +1,245 @@
+$green: #007777;
+$green-light: #80BBBB;
+$header: 48px;
+$margin: 20px;
+
+@mixin font($size) {
+	font-family: 'Montserrat', 'Avenir', sans-serif;
+	font-size: $size;
+}
+
+@mixin align-items() {
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+@mixin background-size() {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@mixin border-radius() {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	border-radius: 10px;
+}
+
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-o-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+@mixin justify-content($justify) {
+	-webkit-justify-content: $justify;
+	-moz-justify-content: $justify;
+	-o-justify-content: $justify;
+	justify-content: $justify;
+}
+
+@mixin transform() {
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+nav {
+	background-color: $green;
+	height: $header;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1;
+}
+
+#nav-ul {
+	@include align-items();
+	@include justify-content(space-evenly);
+	display: flex;
+	height: 100%;
+}
+
+.nav-li {
+	list-style: none;
+}
+
+a {
+	@include font(16px);
+	text-decoration: none;
+}
+
+#welcome {
+	@include font(16px);
+	background: linear-gradient(180deg, $green $header, $green-light 100%);
+	height: 100vh;
+	min-height: 211px;
+}
+
+#welcome-box {
+	@include transform();
+	position: relative;
+	top: 50%;
+}
+
+h1 {
+	@include font(32px);
+}
+
+#welcome-subtitle {
+	margin-top: 0.5em;
+}
+
+#welcome-button {
+	@include border-radius();
+	background-color: #C65A00;
+	display: block;
+	margin: $margin auto 0 auto;
+	padding: 0.5em;
+	text-decoration: none;
+	width: 150px;
+}
+
+#welcome-button:hover {
+	@include box-shadow(5px 10px 20px $green);
+}
+
+#projects {
+	margin-top: -$header;
+	padding-top: $header;
+}
+
+#projects-header {
+	color: $green;
+	margin: $margin $margin 0 $margin;
+}
+
+h2 {
+	@include font(24px);
+}
+
+.projects-subheader {
+	@include font(16px);
+	font-weight: normal;
+	margin: $margin $margin 0 $margin;
+}
+
+.projects-section {
+	display: grid;
+	grid-gap: $margin;
+	grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+	margin: $margin $margin 0 $margin;
+	padding-bottom: $margin;
+}
+
+.projects-tile {
+	@include border-radius();
+	display: block;
+	overflow: hidden;
+	p {
+		padding: 0.5em;
+	}
+}
+
+.projects-tile:hover {
+	@include box-shadow(5px 10px 20px #696969);
+}
+
+.center-img {
+	display: block;
+	height: 153px;
+	margin: auto;
+	width: 153px;
+}
+
+.fill-img {
+	@include background-size();
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 153px;
+	width: 100%;
+}
+
+#chordpouch {
+	background-color: #9C6A56;
+}
+
+#nutritrak {
+	background-color: #318AB0;
+}
+
+#tribute {
+	background-color: #696969;
+}
+
+#tribute-img {
+	background-image: url(https://live.staticflickr.com/65535/49220510576_c9b0112f34_o.jpg);
+}
+
+#survey {
+	background-color: #BF8640;
+}
+
+#survey-img {
+	background-image: url(https://live.staticflickr.com/65535/49220510671_316c4e40ca_o.jpg);
+}
+
+#documentation {
+	background-color: #FFFFE6;
+	color: black;
+}
+
+#landing {
+	background-color: #00AAAA;
+}
+
+#quote {
+	background-color: green;
+}
+
+#quote-img {
+	background-image: url(https://live.staticflickr.com/65535/49393703856_672c3a7ef8_o.jpg);
+}
+
+#calculator {
+	background-color: #999999;
+}
+
+#contact {
+	background: linear-gradient(0deg, $green 0%, $green-light 100%);
+	margin-top: $margin;
+	padding: $margin;
+}
+
+#contact-ul {
+	@include justify-content(center);
+	display: grid;
+	grid-gap: $margin;
+	grid-template-columns: repeat(auto-fit, 150px);
+	list-style: none;
+	margin-top: $margin;
+}
+
+.text-white {
+	color: white;
+}
+
+.text-center {
+	text-align: center;
+}
+
+@media screen and (max-width: 367px) {
+	.projects-section {
+		grid-template-columns: calc(100vw - 40px);
+	}
+}
