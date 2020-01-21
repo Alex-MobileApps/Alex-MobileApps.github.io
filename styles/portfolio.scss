@@ -3,49 +3,11 @@ $green-light: #80BBBB;
 $header: 48px;
 $margin: 20px;
 
+@import 'mixins';
+
 @mixin font($size) {
 	font-family: 'Montserrat', 'Avenir', sans-serif;
 	font-size: $size;
-}
-
-@mixin align-items() {
-	-webkit-align-items: center;
-	align-items: center;
-}
-
-@mixin background-size() {
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-
-@mixin border-radius() {
-	-webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	-o-border-radius: 10px;
-	border-radius: 10px;
-}
-
-@mixin box-shadow($shadow) {
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	-o-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
-
-@mixin justify-content($justify) {
-	-webkit-justify-content: $justify;
-	-moz-justify-content: $justify;
-	-o-justify-content: $justify;
-	justify-content: $justify;
-}
-
-@mixin transform() {
-	-webkit-transform: translateY(-50%);
-	-moz-transform: translateY(-50%);
-	-o-transform: translateY(-50%);
-	transform: translateY(-50%);
 }
 
 * {
@@ -64,7 +26,7 @@ nav {
 }
 
 #nav-ul {
-	@include align-items();
+	@include align-items(center);
 	@include justify-content(space-evenly);
 	display: flex;
 	height: 100%;
@@ -87,7 +49,7 @@ a {
 }
 
 #welcome-box {
-	@include transform();
+	@include transform(translateY(-50%));
 	position: relative;
 	top: 50%;
 }
@@ -101,7 +63,7 @@ h1 {
 }
 
 #welcome-button {
-	@include border-radius();
+	@include border-radius(10px);
 	background-color: #C65A00;
 	display: block;
 	margin: $margin auto 0 auto;
@@ -143,7 +105,7 @@ h2 {
 }
 
 .projects-tile {
-	@include border-radius();
+	@include border-radius(10px);
 	display: block;
 	overflow: hidden;
 	p {
@@ -163,7 +125,7 @@ h2 {
 }
 
 .fill-img {
-	@include background-size();
+	@include background-size(cover);
 	background-position: center;
 	background-repeat: no-repeat;
 	height: 153px;
