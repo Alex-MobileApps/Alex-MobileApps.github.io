@@ -24,11 +24,35 @@
 	box-shadow: $shadow;
 }
 
+@mixin box-sizing($sizing) {
+	-webkit-box-sizing: $sizing;
+	-moz-box-sizing: $sizing;
+	-o-box-sizing: $sizing;
+	box-sizing: $sizing;
+}
+
+@mixin flex-direction($direction) {
+	-webkit-flex-direction: $direction;
+	-moz-flex-direction: $direction;
+	-o-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
 @mixin justify-content($justify) {
 	-webkit-justify-content: $justify;
 	-moz-justify-content: $justify;
 	-o-justify-content: $justify;
 	justify-content: $justify;
+}
+
+@mixin overflow-x($overflow) {
+	-ms-overflow-x: $overflow;
+	overflow-x: $overflow;
+}
+
+@mixin overflow-y($overflow) {
+	-ms-overflow-y: $overflow;
+	overflow-y: $overflow;
 }
 
 @mixin transform($transform) {
