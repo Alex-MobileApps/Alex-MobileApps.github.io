@@ -58,8 +58,8 @@ p {
 }
 
 #preview {
-  -ms-overflow-y: scroll;
-  overflow-y: scroll;
+  -ms-overflow-y: auto;
+  overflow-y: auto;
   font-family: "Cambay", sans-serif;
   background-color: white;
   height: calc(100% - 40px);
@@ -76,13 +76,20 @@ p {
 #preview code {
   background-color: #EBEBF1;
 }
-#preview pre {
-  background-color: #EBEBF1;
-  border-radius: 10px;
-  padding: 20px;
+#preview img {
+  display: block;
+  height: auto;
+  max-width: calc(100% - 1em);
 }
 #preview li {
   margin-left: 1em;
+}
+#preview pre {
+  -ms-overflow-x: auto;
+  overflow-x: auto;
+  background-color: #EBEBF1;
+  border-radius: 10px;
+  padding: 20px;
 }
 #preview table {
   border-collapse: collapse;

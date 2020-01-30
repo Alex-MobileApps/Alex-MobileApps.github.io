@@ -61,7 +61,7 @@ p {
 }
 
 #preview {
-	@include overflow-y(scroll);
+	@include overflow-y(auto);
 	font-family: $font-family;
 	background-color: white;
 	height: calc(100% - #{$height-toolbar});
@@ -77,14 +77,21 @@ p {
 	code {
 		background-color: #EBEBF1;
 	}
-	pre {
-		background-color: #EBEBF1;
-		border-radius: 10px;
-		padding: 20px;
+	img {
+		display: block;
+		height: auto;
+		max-width: calc(100% - 1em);
 	}
 	li {
 		margin-left: 1em;
 	}
+	pre {
+		@include overflow-x(auto);
+		background-color: #EBEBF1;
+		border-radius: 10px;
+		padding: 20px;
+	}
+	
 	table {
     border-collapse: collapse;
   }
