@@ -188,6 +188,10 @@ h2 {
   background-image: url(https://live.staticflickr.com/65535/49393703856_672c3a7ef8_o.jpg);
 }
 
+#markdown {
+  background-color: #333333;
+}
+
 #calculator {
   background-color: #999999;
 }
