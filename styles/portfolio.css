@@ -155,41 +155,8 @@ h2 {
   background-color: #318AB0;
 }
 
-#tribute {
-  background-color: #696969;
-}
-
-#tribute-img {
-  background-image: url(https://live.staticflickr.com/65535/49220510576_c9b0112f34_o.jpg);
-}
-
-#survey {
-  background-color: #BF8640;
-}
-
-#survey-img {
-  background-image: url(https://live.staticflickr.com/65535/49220510671_316c4e40ca_o.jpg);
-}
-
-#documentation {
-  background-color: #FFFFE6;
-  color: black;
-}
-
-#landing {
-  background-color: #00AAAA;
-}
-
-#quote {
-  background-color: green;
-}
-
-#quote-img {
-  background-image: url(https://live.staticflickr.com/65535/49393703856_672c3a7ef8_o.jpg);
-}
-
-#markdown {
-  background-color: #333333;
+#pomodoro {
+  background-color: #004C7F;
 }
 
 #calculator {
@@ -202,6 +169,43 @@ h2 {
 
 #sound-img {
   background-image: url(https://live.staticflickr.com/65535/49490410033_5c42152cb7_o.jpg);
+}
+
+#markdown {
+  background-color: #333333;
+}
+
+#quote {
+  background-color: green;
+}
+
+#quote-img {
+  background-image: url(https://live.staticflickr.com/65535/49393703856_672c3a7ef8_o.jpg);
+}
+
+#documentation {
+  background-color: #FFFFE6;
+  color: black;
+}
+
+#landing {
+  background-color: #00AAAA;
+}
+
+#survey {
+  background-color: #BF8640;
+}
+
+#survey-img {
+  background-image: url(https://live.staticflickr.com/65535/49220510671_316c4e40ca_o.jpg);
+}
+
+#tribute {
+  background-color: #696969;
+}
+
+#tribute-img {
+  background-image: url(https://live.staticflickr.com/65535/49220510576_c9b0112f34_o.jpg);
 }
 
 #contact {
