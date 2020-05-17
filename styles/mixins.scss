@@ -1,3 +1,5 @@
+// Standard Mixins
+
 @mixin align-items($align) {
 	-webkit-align-items: $align;
 	align-items: $align;
@@ -65,4 +67,11 @@
 	-moz-transform: $transform;
 	-o-transform: $transform;
 	transform: $transform;
+}
+
+// Misc Mixins
+
+@mixin border-background($color) {
+	border: 1px solid $color;
+	background-color: $color;
 }
