@@ -73,10 +73,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	background-color: $color-blue-dark;
-}
-
 #quote-box {
 	margin: $margin auto;
 	max-width: calc(100vw - #{$margin-double});
@@ -107,5 +103,11 @@ a:hover {
 	}
 	#tweet-quote {
 		margin: 0 $margin;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	a:hover {
+		background-color: $color-blue-dark;
 	}
 }

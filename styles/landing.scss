@@ -192,10 +192,6 @@ p {
 	padding: 1em;	
 }
 
-#submit:hover {
-	background-color: $green;
-}
-
 #ul-nav {
 	display: flex;
 	height: 100%;
@@ -227,4 +223,10 @@ p {
 		@include flex-direction(column);
 		@include justify-content(center);
 	}
-}	
+}
+
+@media (hover: hover) and (pointer: fine) {
+	#submit:hover {
+		background-color: $green;
+	}
+}

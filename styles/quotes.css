@@ -69,10 +69,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  background-color: #008594;
-}
-
 #quote-box {
   margin: 20px auto;
   max-width: calc(100vw - 40px);
@@ -116,6 +112,11 @@ a:hover {
 
   #tweet-quote {
     margin: 0 20px;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  a:hover {
+    background-color: #008594;
   }
 }
 

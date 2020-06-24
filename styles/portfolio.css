@@ -73,13 +73,6 @@ h1 {
   width: 150px;
 }
 
-#welcome-button:hover {
-  -webkit-box-shadow: 5px 10px 20px #007777;
-  -moz-box-shadow: 5px 10px 20px #007777;
-  -o-box-shadow: 5px 10px 20px #007777;
-  box-shadow: 5px 10px 20px #007777;
-}
-
 #projects {
   margin-top: -48px;
   padding-top: 48px;
@@ -120,13 +113,6 @@ h2 {
 }
 .projects-tile p {
   padding: 0.5em;
-}
-
-.projects-tile:hover {
-  -webkit-box-shadow: 5px 10px 20px #696969;
-  -moz-box-shadow: 5px 10px 20px #696969;
-  -o-box-shadow: 5px 10px 20px #696969;
-  box-shadow: 5px 10px 20px #696969;
 }
 
 .center-img {
@@ -262,6 +248,21 @@ h2 {
 @media screen and (max-width: 367px) {
   .projects-section {
     grid-template-columns: calc(100vw - 40px);
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  #welcome-button:hover {
+    -webkit-box-shadow: 5px 10px 20px #007777;
+    -moz-box-shadow: 5px 10px 20px #007777;
+    -o-box-shadow: 5px 10px 20px #007777;
+    box-shadow: 5px 10px 20px #007777;
+  }
+
+  .projects-tile:hover {
+    -webkit-box-shadow: 5px 10px 20px #696969;
+    -moz-box-shadow: 5px 10px 20px #696969;
+    -o-box-shadow: 5px 10px 20px #696969;
+    box-shadow: 5px 10px 20px #696969;
   }
 }
 

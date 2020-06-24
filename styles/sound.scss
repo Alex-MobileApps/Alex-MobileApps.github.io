@@ -64,12 +64,6 @@ html {
 	display: flex;
 }
 
-.drum-pad:hover {
-	@include box-shadow($box-shadow-large);
-	background-color: $color-aqua;
-	color: white;
-}
-
 #drum-settings {
 	@include box-sizing(border-box);
 	@include justify-content(center);
@@ -190,5 +184,13 @@ p {
 	#drum-machine {
 		@include transform(translate(-50%, -50%));
 		top: 50%;
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.drum-pad:hover {
+		@include box-shadow($box-shadow-large);
+		background-color: $color-aqua;
+		color: white;
 	}
 }

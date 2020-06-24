@@ -67,15 +67,6 @@ html {
   display: flex;
 }
 
-.drum-pad:hover {
-  -webkit-box-shadow: 10px 20px 30px #006464;
-  -moz-box-shadow: 10px 20px 30px #006464;
-  -o-box-shadow: 10px 20px 30px #006464;
-  box-shadow: 10px 20px 30px #006464;
-  background-color: #00C8C8;
-  color: white;
-}
-
 #drum-settings {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -237,6 +228,16 @@ p {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     top: 50%;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  .drum-pad:hover {
+    -webkit-box-shadow: 10px 20px 30px #006464;
+    -moz-box-shadow: 10px 20px 30px #006464;
+    -o-box-shadow: 10px 20px 30px #006464;
+    box-shadow: 10px 20px 30px #006464;
+    background-color: #00C8C8;
+    color: white;
   }
 }
 

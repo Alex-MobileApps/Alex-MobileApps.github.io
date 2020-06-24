@@ -72,9 +72,7 @@ h1 {
 	width: 150px;
 }
 
-#welcome-button:hover {
-	@include box-shadow(5px 10px 20px $green);
-}
+
 
 #projects {
 	margin-top: -$header;
@@ -111,10 +109,6 @@ h2 {
 	p {
 		padding: 0.5em;
 	}
-}
-
-.projects-tile:hover {
-	@include box-shadow(5px 10px 20px #696969);
 }
 
 .center-img {
@@ -243,5 +237,14 @@ h2 {
 @media screen and (max-width: 367px) {
 	.projects-section {
 		grid-template-columns: calc(100vw - 40px);
+	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	#welcome-button:hover {
+		@include box-shadow(5px 10px 20px $green);
+	}
+	.projects-tile:hover {
+		@include box-shadow(5px 10px 20px #696969);
 	}
 }

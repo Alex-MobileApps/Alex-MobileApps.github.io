@@ -38,10 +38,6 @@ button {
 	width: 100%;
 }
 
-button:hover {
-	background-color: #4079BF;
-} 
-
 h1 {
 	@include fonts(var(--h1-size), center);
 	color: white;
@@ -137,4 +133,10 @@ textarea {
 		--margin-small: 20px;
 		--p-size: 16px;
 	}
+}
+
+@media (hover: hover) and (pointer: fine) {
+	button:hover {
+		background-color: #4079BF;
+	} 
 }

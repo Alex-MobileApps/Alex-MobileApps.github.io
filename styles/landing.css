@@ -211,10 +211,6 @@ p {
   padding: 1em;
 }
 
-#submit:hover {
-  background-color: #009999;
-}
-
 #ul-nav {
   display: flex;
   height: 100%;
@@ -253,6 +249,11 @@ p {
     -moz-justify-content: center;
     -o-justify-content: center;
     justify-content: center;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  #submit:hover {
+    background-color: #009999;
   }
 }
 

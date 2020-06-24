@@ -89,16 +89,6 @@ button {
   width: calc(2 * 45px);
 }
 
-#start_stop:hover,
-#reset:hover,
-.stepper:hover {
-  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
-  -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
-  background-color: #17B0AD;
-}
-
 .stepper {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -191,6 +181,17 @@ button {
     -moz-justify-content: center;
     -o-justify-content: center;
     justify-content: center;
+  }
+}
+@media (hover: hover) and (pointer: fine) {
+  #start_stop:hover,
+#reset:hover,
+.stepper:hover {
+    -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+    background-color: #17B0AD;
   }
 }
 
