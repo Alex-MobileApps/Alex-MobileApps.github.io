@@ -1,10 +1,11 @@
 $(document).ready(function() {
 
-	let quotes;
+	let quotes = [];
 	let fetched = false;
 
 	const setQuote = () => {
 		const quote = quotes[Math.floor(Math.random() * quotes.length)];
+		console.log(typeof quotes);
 		if (quote.author === null) quote.author = "Unnamed Author";
 		$("#tweet-quote").attr("href", "https://twitter.com/intent/tweet?&text=" + encodeURIComponent(`"${quote.text}" - ${quote.author}`));
 		$("#tumblr-quote").attr("href", "http://tumblr.com/widgets/share/tool?posttype=quote&content=" + encodeURIComponent(quote.text) + "&caption=" + encodeURIComponent(quote.author) + "&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button");
@@ -20,7 +21,7 @@ $(document).ready(function() {
 	}
 
 	const setQuotes = data => {
-		quotes = data;
+		quotes = data
 		fetched = true;
 		setQuote();
 	}
@@ -31,7 +32,7 @@ $(document).ready(function() {
 			crossDomain: true,
 			method: "GET",
 			url: "https://type.fit/api/quotes",
-			success: response => setQuotes(response),
+			success: response => setQuotes(JSON.parse(response)),
 			error: () => {
 				if (localQuotes) return setQuotes(localQuotes);
 				setText("Unable to retrieve quotes.", "Please try again later");
